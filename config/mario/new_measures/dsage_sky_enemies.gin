@@ -1,0 +1,6 @@
+# Configuration for DSAGE Sky-Enemies.
+
+include "config/mario/dsage.gin"
+include "config/mario/new_measures/sky_enemies_base.gin"
+
+experiment.name = "DSAGE Sky-Enemies"

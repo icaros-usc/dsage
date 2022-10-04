@@ -1,0 +1,16 @@
+# Base config for number of jumps, enemies killed measures.
+
+MarioManager.n_evals = 5
+
+MarioConfig.measure_names = [
+  "calc_num_jumps", # Agent jumps.
+  "calc_enemies_killed", # Enemies killed.
+]
+MarioConfig.aggregation_type = "mean"
+
+GridArchive.dims = [100, 25]
+# Ends up mapping to [0, 99] for jumps and [0, 24] for enemies.
+GridArchive.ranges = [[0, 100], [0, 25]]
+
+downsample/GridArchive.dims = [20, 5]
+downsample/GridArchive.ranges = [[0, 100], [0, 25]]

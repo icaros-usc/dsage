@@ -1,0 +1,6 @@
+# Configuration for DSAGE Repetition-Exploration.
+
+include "config/maze/dsage.gin"
+include "config/maze/new_measures/rep_explore_base.gin"
+
+experiment.name = "DSAGE Repetition-Exploration"

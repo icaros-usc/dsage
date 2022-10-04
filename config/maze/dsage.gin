@@ -1,0 +1,8 @@
+# Configuration for DSAGE Blocks-Path.
+
+Manager.downsample_em = True
+Manager.downsample_archive_type = @downsample/GridArchive
+
+include "config/maze/dsage_only_anc.gin"
+
+experiment.name = "DSAGE Blocks-Path"

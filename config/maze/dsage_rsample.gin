@@ -1,0 +1,7 @@
+# Configuration for DSAGE (Random sample) Blocks-Path.
+
+include "config/maze/dsage_only_anc.gin"
+
+experiment.name = "DSAGE (Random sample) Blocks-Path"
+Manager.random_sample_em = True
+Manager.num_elites_to_eval = 432

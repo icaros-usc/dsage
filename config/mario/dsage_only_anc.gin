@@ -1,0 +1,15 @@
+# Configuration for DSAGE-Only Anc Sky-Jump.
+
+include "config/mario/dsage_basic.gin"
+
+experiment.name = "DSAGE-Only Anc Sky-Jump"
+MarioEmulationModel.pre_network_type = @MarioAugResnetOccupancy
+MarioEmulationModel.pre_network_loss_func = "mse"
+MarioEmulationModel.pre_network_loss_weight = 10
+
+MarioAugResnetOccupancy.i_size = 64
+MarioAugResnetOccupancy.nc = 17
+MarioAugResnetOccupancy.ndf = 64
+MarioAugResnetOccupancy.n_res_layers = 2
+
+MarioConvolutional.nc = 18

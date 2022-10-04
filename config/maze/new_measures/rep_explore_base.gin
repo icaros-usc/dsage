@@ -1,0 +1,10 @@
+# Base configuration for repetitions and exploration measures.
+
+MazeConfig.objective_name = "accel_none"
+MazeConfig.measure_names = ["n_repeated_cells", "frac_explored_cells"]
+
+GridArchive.dims = [162, 100]
+GridArchive.ranges = [[0, 648], [0, 1]]
+
+downsample/GridArchive.dims = [27, 25]
+downsample/GridArchive.ranges = [[0, 648], [0, 1]]

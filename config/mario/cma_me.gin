@@ -1,0 +1,8 @@
+# Configuration for CMA-ME Sky-Jump.
+
+include "config/mario/base.gin"
+include "config/mario/sky_jumps_base.gin"
+
+experiment.name = "CMA-ME Sky-Jump"
+Manager.is_em = False
+Manager.emitter_types = [(@ImprovementEmitter, 5)]

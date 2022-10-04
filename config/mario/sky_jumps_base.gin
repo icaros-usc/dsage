@@ -1,0 +1,16 @@
+# Base config for sky tiles, number of jumps measures.
+
+MarioManager.n_evals = 5
+
+MarioConfig.measure_names = [
+  "calc_higher_level_non_empty_blocks", # Sky tiles.
+  "calc_num_jumps", # Agent jumps.
+]
+MarioConfig.aggregation_type = "mean"
+
+GridArchive.dims = [150, 100]
+# Ends up mapping to [0, 149] for sky tiles and [0, 99] for jumps.
+GridArchive.ranges = [[0, 150], [0, 100]]
+
+downsample/GridArchive.dims = [30, 20]
+downsample/GridArchive.ranges = [[0, 150], [0, 100]]

@@ -1,0 +1,10 @@
+# Base configuration for agent path length measures
+
+MazeConfig.objective_name = "accel_none"
+MazeConfig.measure_names = ["num_blocks", "agent_path_length"]
+
+GridArchive.dims = [256, 162]
+GridArchive.ranges = [[0, 256], [0, 648]]
+
+downsample/GridArchive.dims = [32, 27]
+downsample/GridArchive.ranges = [[0, 256], [0, 648]]

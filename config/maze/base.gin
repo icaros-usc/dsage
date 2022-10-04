@@ -1,0 +1,50 @@
+# Base Configuration.
+
+## Common ##
+sigma0 = 0.2
+measure_dim = 2
+num_objects = 2
+
+## Manager ##
+
+# Algorithm.
+Manager.env_manager_class = @MazeManager
+Manager.is_em = True
+Manager.max_evals = 100000
+Manager.initial_sols = 100
+Manager.inner_itrs = 10_000
+Manager.archive_type = @GridArchive
+Manager.sol_size = 256
+Manager.emitter_types = [(@MapElitesBaselineEmitter, 5)]
+# Logging.
+Manager.archive_save_freq = -1
+Manager.reload_save_freq = 1
+Manager.plot_metrics_freq = 1
+
+## Maze Manager ##
+
+MazeManager.n_evals = 1
+MazeManager.lvl_width = 16
+MazeManager.lvl_height = 16
+MazeManager.num_objects = %num_objects
+
+## MapElitesBaselineEmitter ##
+
+MapElitesBaselineEmitter.batch_size = 30
+MapElitesBaselineEmitter.initial_population = 100
+MapElitesBaselineEmitter.mutation_k = 10
+MapElitesBaselineEmitter.num_objects = %num_objects
+
+## EmulationModel ##
+
+MazeEmulationModel.network_type = @MazeConvolutional
+MazeEmulationModel.prediction_type = "regression"
+MazeEmulationModel.train_epochs = 200
+MazeEmulationModel.train_batch_size = 64
+MazeEmulationModel.train_sample_size = 20000
+
+MazeConvolutional.i_size = 16
+MazeConvolutional.nc = 5
+MazeConvolutional.ndf = 64
+MazeConvolutional.n_extra_layers = 0
+MazeConvolutional.head_dimensions = [1, 1, 1]

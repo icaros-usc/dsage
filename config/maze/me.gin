@@ -1,0 +1,9 @@
+# Configuration for ME Blocks-Path.
+
+include "config/maze/base.gin"
+include "config/maze/accel_base.gin"
+include "config/maze/block_path_base.gin"
+
+experiment.name = "ME Blocks-Path"
+Manager.is_em = False
+Manager.emitter_types = [(@MapElitesBaselineEmitter, 5)]

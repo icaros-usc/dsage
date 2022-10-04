@@ -1,0 +1,6 @@
+# Configuration for DSAGE-Only Anc Blocks-Path with longer training.
+
+include "config/maze/dsage_only_anc.gin"
+
+experiment.name = "DSAGE-Only Anc Blocks-Path (long)"
+MazeEmulationModel.train_epochs = 5300

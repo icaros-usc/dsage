@@ -1,0 +1,6 @@
+# Configuration for DSAGE-Only Anc Sky-Jump with longer training.
+
+include "config/mario/dsage_only_anc.gin"
+
+experiment.name = "DSAGE-Only Anc Sky-Jump (long)"
+MarioEmulationModel.train_epochs = 1350

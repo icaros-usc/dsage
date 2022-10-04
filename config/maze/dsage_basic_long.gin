@@ -1,0 +1,6 @@
+# Configuration for DSAGE Basic Blocks-Path with longer training.
+
+include "config/maze/dsage_basic.gin"
+
+experiment.name = "DSAGE Basic Blocks-Path (long)"
+MazeEmulationModel.train_epochs = 6400

@@ -1,0 +1,6 @@
+# Configuration for DSAGE Blocks-Repetition.
+
+include "config/maze/dsage.gin"
+include "config/maze/new_measures/block_rep_base.gin"
+
+experiment.name = "DSAGE Blocks-Repetition"

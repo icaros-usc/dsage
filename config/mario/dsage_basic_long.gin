@@ -1,0 +1,6 @@
+# Configuration for DSAGE Basic Sky-Jump with longer training.
+
+include "config/mario/dsage_basic.gin"
+
+experiment.name = "DSAGE Basic Sky-Jump (long)"
+MarioEmulationModel.train_epochs = 1350

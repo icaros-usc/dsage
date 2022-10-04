@@ -1,0 +1,16 @@
+# Configuration for DSAGE-Only Anc Blocks-Path.
+
+include "config/maze/dsage_basic.gin"
+
+experiment.name = "DSAGE-Only Anc Blocks-Path"
+
+MazeEmulationModel.pre_network_type = @MazeAugResnetOccupancy
+MazeEmulationModel.pre_network_loss_func = "mse"
+MazeEmulationModel.pre_network_loss_weight = 10
+
+MazeAugResnetOccupancy.i_size = 16
+MazeAugResnetOccupancy.nc = 4
+MazeAugResnetOccupancy.ndf = 64
+MazeAugResnetOccupancy.n_res_layers = 2
+
+MazeConfig.augment_type = "agent_occupancy"

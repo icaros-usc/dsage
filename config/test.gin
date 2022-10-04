@@ -1,0 +1,7 @@
+# Include this with another config in order to set up test configuration.
+
+Manager.max_evals = 10
+Manager.inner_itrs = 2
+Manager.initial_sols = 5
+ImprovementEmitter.batch_size = 2
+MapElitesBaselineEmitter.batch_size = 2

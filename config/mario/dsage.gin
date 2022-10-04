@@ -1,0 +1,6 @@
+# Configuration for DSAGE Sky-Jump.
+
+include "config/mario/dsage_only_anc.gin"
+
+experiment.name = "DSAGE Sky-Jump"
+Manager.downsample_em = True

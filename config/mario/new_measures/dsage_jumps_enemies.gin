@@ -1,0 +1,6 @@
+# Configuration for DSAGE Jumps-Enemies.
+
+include "config/mario/dsage.gin"
+include "config/mario/new_measures/jumps_enemies_base.gin"
+
+experiment.name = "DSAGE Jumps-Enemies"

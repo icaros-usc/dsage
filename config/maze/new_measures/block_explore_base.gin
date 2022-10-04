@@ -1,0 +1,10 @@
+# Base configuration for num blocks and exploration measures.
+
+MazeConfig.objective_name = "accel_none"
+MazeConfig.measure_names = ["num_blocks", "frac_explored_cells"]
+
+GridArchive.dims = [256, 100]
+GridArchive.ranges = [[0, 256], [0, 1]]
+
+downsample/GridArchive.dims = [32, 25]
+downsample/GridArchive.ranges = [[0, 256], [0, 1]]

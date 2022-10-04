@@ -1,0 +1,57 @@
+# Python
+*.pyc
+*.pyo
+__pycache__/*
+.ipynb_checkpoints/*
+box2d_gym
+.coverage
+
+# Dask
+dask-worker-space/
+.*scheduler_info.json
+
+# mkdocs
+site/
+
+# Results
+results/
+dev-results/
+checkpoints/*
+logs/*
+slurm_logs/*
+*.log
+gan_training/
+# figure_data.json
+comparison/
+stats_tests/
+results_table.tex
+heatmap_figure/
+
+# Editor
+.vscode/*
+.*.swp
+*.vim
+.idea/
+
+# Miscellaneous
+.env
+ipp_nodes.txt
+.DS_Store
+quicksilver_config.json
+.fossa.yml
+env/
+dev-env/
+
+# Figures
+level.png
+metrics.pdf
+compare_evals.pdf
+comparison.pdf
+comparison.png
+results-table.tex
+# manifest.yaml
+figure-data.json
+plots/
+
+# Singularity
+*.sif

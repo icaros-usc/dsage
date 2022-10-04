@@ -1,0 +1,6 @@
+# Base configuration for ACCEL agents.
+
+MazeConfig.objective_name = "accel"
+MazeManager.n_evals = 50
+RLAgentConfig.recurrent_hidden_size = 256
+RLAgentConfig.model_path = "accel_seed_1/model_20000.tar"  # Replace with the saved model path

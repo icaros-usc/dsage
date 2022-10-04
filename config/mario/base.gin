@@ -1,0 +1,62 @@
+# Base Configuration.
+
+## Common ##
+sigma0 = 0.2
+measure_dim = 2
+nz = 32
+
+## Manager ##
+
+# Algorithm.
+Manager.env_manager_class = @MarioManager
+Manager.is_em = True
+Manager.max_evals = 10000
+Manager.initial_sols = 100
+Manager.inner_itrs = 10_000
+Manager.archive_type = @GridArchive
+Manager.sol_size = %nz
+Manager.emitter_types = [(@ImprovementEmitter, 1)]
+Manager.downsample_em = False
+Manager.downsample_archive_type = @downsample/GridArchive
+# Logging.
+Manager.archive_save_freq = -1
+Manager.reload_save_freq = 1
+Manager.plot_metrics_freq = 1
+
+## Mario Manager ##
+
+MarioManager.n_evals = 1
+MarioManager.initial_sol_sigma = %sigma0
+
+## ImprovementEmitter ##
+
+ImprovementEmitter.sigma0 = %sigma0
+ImprovementEmitter.selection_rule = "filter"
+ImprovementEmitter.restart_rule = "no_improvement"
+ImprovementEmitter.weight_rule = "truncation"
+ImprovementEmitter.batch_size = 30
+
+## GAN and EmulationModel ##
+
+MarioEmulationModel.network_type = @MarioConvolutional
+MarioEmulationModel.prediction_type = "regression"
+MarioEmulationModel.train_epochs = 200
+MarioEmulationModel.train_batch_size = 64
+
+MarioConvolutional.i_size = 64
+MarioConvolutional.nc = 17
+MarioConvolutional.ndf = 64
+MarioConvolutional.n_extra_layers = 0
+MarioConvolutional.head_dimensions = [1, 1, 1]
+
+MarioGenerator.isize = 64
+MarioGenerator.lvl_width = 56
+MarioGenerator.lvl_height = 16
+MarioGenerator.nz = %nz
+# nc is the number of tile types in index2str.json
+# https://github.com/icaros-usc/MarioGAN-LSI/blob/master/GANTrain/index2str.json
+MarioGenerator.nc = 17
+MarioGenerator.ngf = 64
+MarioGenerator.ngpu = 1
+MarioGenerator.n_extra_layers = 0
+MarioGenerator.model_file = "netG_epoch_4999_7684.pth"

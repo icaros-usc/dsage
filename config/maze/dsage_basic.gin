@@ -1,0 +1,7 @@
+# Configuration for DSAGE Basic Blocks-Path.
+
+include "config/maze/base.gin"
+include "config/maze/accel_base.gin"
+include "config/maze/block_path_base.gin"
+
+experiment.name = "DSAGE Basic Blocks-Path"

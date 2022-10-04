@@ -1,0 +1,24 @@
+# See https://github.com/dask/distributed/blob/main/distributed/distributed.yaml
+distributed:
+  worker:
+    # See https://distributed.dask.org/en/latest/worker.html#memory-management
+    memory:
+      rebalance:
+        measure: managed_in_memory
+      spill: false
+      pause: false
+      terminate: false
+
+  comm:
+    timeouts:
+      # Extended time before connection to worker fails.
+      connect: 100s
+      # Extended time before calling an unresponsive connection dead.
+      tcp: 100s
+
+  admin:
+    tick:
+      # Default time between event loop health checks.
+      interval: 20ms
+      # Extended time before triggering warning about unresponsive worker.
+      limit: 60s

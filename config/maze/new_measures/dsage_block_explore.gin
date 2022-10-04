@@ -1,0 +1,6 @@
+# Configuration for DSAGE Blocks-Exploration.
+
+include "config/maze/dsage.gin"
+include "config/maze/new_measures/block_explore_base.gin"
+
+experiment.name = "DSAGE Blocks-Exploration"
