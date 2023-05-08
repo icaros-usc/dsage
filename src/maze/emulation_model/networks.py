@@ -112,10 +112,11 @@ class MazeConvolutional(nn.Module):
         Returns:
             predicted objectives and predicted measures
         """
+        _, lvl_height, lvl_width = lvls.shape
         inputs = int_preprocess(lvls, self.i_size, self.nc,
                                 OBJ_TYPES_TO_INT[" "])
         if aug_lvls is not None:
-            inputs[:, -aug_lvls.shape[1]:, ...] = aug_lvls
+            inputs[:, -aug_lvls.shape[1]:, :lvl_height, :lvl_width] = aug_lvls
         return self(inputs)
 
     def forward(self, inputs):
